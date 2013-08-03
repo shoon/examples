@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Json encoding test
+#   Test for the following issue:
+#   https://github.com/greenlaw110/play-rythm/issues/81
+GET     /play-rythm/issue/{id}                  PlayRythmTestApi.testIssue(format:'json')
+
+#CRUD
+*      /admin                                   module:crud
+
+# Home page
+GET     /                                       Application.index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

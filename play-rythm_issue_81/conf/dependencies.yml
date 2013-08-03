@@ -1,0 +1,15 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> crud
+    - com.gelinsoft -> play-rythm 1.0-b9c
+    - com.gelinsoft -> betterlogs 1.2i
+ 
+repositories:
+    - gelinsoft:
+        type: http
+        artifact: "http://gelinsoft.com/play/repo/[module]-[revision].zip"
+        contains:
+            - com.gelinsoft -> *
+    

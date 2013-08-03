@@ -1,0 +1,5 @@
+@args JsonEncodedString testString
+{
+    "smallString" : "@testString.smallString",
+    "largeString" : "@testString.largeString"
+}
